@@ -41,12 +41,13 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(modifier: Modifier = Modifier) {
-    Column(modifier = modifier) {
-        Row(modifier = modifier.weight(weight = 1F, fill = true)) {
+    Row(modifier = modifier) {
+        Column(modifier = modifier.weight(weight = 1F, fill = true)) {
             Column(
                 modifier = modifier
                     .background(color = Color(0xFFEADDFF))
-                    .padding(16.dp).weight(weight = 1F, fill = true),
+                    .padding(16.dp)
+                    .weight(weight = 1F, fill = true),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
@@ -59,24 +60,6 @@ fun Greeting(modifier: Modifier = Modifier) {
                     text = stringResource(R.string.text_composable_description),
                 )
             }
-            Column(
-                modifier = modifier
-                    .background(color = Color(0xFFD0BCFF))
-                    .padding(16.dp).weight(weight = 1F, fill = true),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Text(
-                    text = stringResource(R.string.image_composable_title),
-                    fontWeight = FontWeight.Bold,
-                    modifier = modifier.padding(bottom = 16.dp),
-                )
-                Text(
-                    text = stringResource(R.string.image_composable_description),
-                )
-            }
-        }
-        Row(modifier = modifier.weight(weight = 1F, fill = true)) {
             Column(
                 modifier = modifier
                     .background(Color(0xFFB69DF8))
@@ -92,6 +75,24 @@ fun Greeting(modifier: Modifier = Modifier) {
                 )
                 Text(
                     text = stringResource(R.string.row_composable_description),
+                )
+            }
+        }
+        Column(modifier = modifier.weight(weight = 1F, fill = true)) {
+            Column(
+                modifier = modifier
+                    .background(color = Color(0xFFD0BCFF))
+                    .padding(16.dp).weight(weight = 1F, fill = true),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = stringResource(R.string.image_composable_title),
+                    fontWeight = FontWeight.Bold,
+                    modifier = modifier.padding(bottom = 16.dp),
+                )
+                Text(
+                    text = stringResource(R.string.image_composable_description),
                 )
             }
             Column(
